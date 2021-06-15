@@ -1,0 +1,236 @@
+//顏色定義
+$color_blue: #282f44
+$color_brown: #e6af2e
+$color_yellow: #f5d061
+$color_white: #ececec 
+// -----------------------
+*
+  // border: solid 1px black
+  position: relative
+  font-family: 'Oswald', 微軟正黑體
+  // header,section,footer
+  //   display: none
+  // #section_works
+  //   display: block
+// -----------------------
+nav.navbar
+  transition: 0.5s
+nav.navbar.at_top
+    background-color: transparent
+
+// -----------------------
+header
+  // margin-left: auto
+  // margin-right: auto
+  background-color: $color_blue
+  text-align: center
+  // overflow: hidden
+  position: relative
+  .icon
+    width: 80%
+    max-width: 250px
+    padding: 200px 0px
+  .marginbottom
+    position: absolute
+    bottom: -2px
+    width: 100%
+    right: 0px
+    animation: upin 2s
+  @keyframes upin
+    0%
+      bottom: -100px
+    100%
+      bottom: -2px
+  .explore
+    color: $color_yellow
+    position: absolute
+    left: 50%
+    top: 80%
+    transform: translate(-50%,-50%)
+    opacity: 0
+    transition: 0.5s
+    &:after
+      content:"V"
+      display: block
+      transform: scaleX(2)
+      font-size: 10px
+    &.at_top
+      opacity: 1
+// -----------------------
+section
+  padding: 60px 0px
+section#section_about
+  background-color: $color-brown
+  color: black
+  
+  .container
+    transform: rotate(15deg)scale(0.9)
+    position: relative
+    .row
+      padding: 10px 0px
+      .r1text
+        font-size: 65px
+        transition: 0.1s
+      .r2text
+        font-size: 25px
+        transition: 0.2s
+      .r3text
+        font-size: 45px
+        transition: 0.3s
+      .tri
+        transform: rotate(-15deg)
+        // width: 50px
+      .tri1
+        width: 200px
+      .tri2
+        width: 20px
+        
+      .tri3
+        width: 70px
+        margin-left: 60%
+      .tri4
+        width: 50px
+        margin-left: 100%
+      .tri5
+        width: 50px
+        margin-left: 100%
+  #cat
+    width: 30%
+    position: absolute
+    right: 0px
+    bottom: -3px
+    transform: translateX(-50%)
+  #cross
+    position: absolute
+    &:before,&:after
+      content: ""
+      display: block
+      width: 55px
+      height: 15px
+      background-color: #fff
+      position: absolute
+      transform: translate(-50%,-50%) rotate(45deg) 
+    &:after
+      transform: translate(-50%,-50%)rotate(-45deg) 
+// -----------------------  
+section#section_service
+  
+  background-color: $color_white
+  img
+    width: 80%
+  h3
+    text-align: center
+    color: $color_brown
+//- -----------------------
+section#section_works  
+  background-color: $color_white
+  .marginbottom
+    position: absolute
+    top: 100%
+    width: 100%
+    right: 0px
+    z-index: 5
+  .work
+    height: 230px
+    // width:100%
+    cursor: pointer
+    position: relative
+    padding: 5px
+    overflow: hidden
+    background-size: cover
+    // transition: 0.5s
+    &:hover
+      &:before,.texts
+        opacity: 1
+     
+    &:before
+      content:""
+      display: block
+      width: 100%
+      height: 100%
+      background-color: rgba(black,0.5)
+      position: absolute
+      left:50%
+      top:50%
+      transform: translate(-50%,-50%)
+      z-index: 10
+      opacity: 0
+      transition: 0.5s
+    &.big
+      height:460px
+    img
+      // width: 100%
+      height: 100%
+      position: absolute
+      left:50%
+      top:50%
+      transform: translate(-50%,-50%)
+      
+    .texts
+      position: absolute
+      left:50%
+      top:50%
+      transform: translate(-50%,-50%)
+      z-index: 11
+      color: white
+      opacity: 0
+      transition: 0.5s
+      line-height: 25px
+    
+
+//- -----------------------
+section#section_contact
+  background-color: $color_blue
+  color: white
+  // position: relative
+  .cat
+    width: 150px
+    position: absolute
+    // left: 50%
+    bottom: -20px
+    transform: translateX(-50%)
+    transition: 0.5s
+  #cat_yellow
+    left: 65%
+  #cat_blue
+    left: 74%
+  #cat_grey
+    left: 82%
+  
+
+  .contact
+    padding: 40px 60px
+  .mails
+    height: 400px
+    .mailcontent
+      background-color: white
+      color: $color_blue
+      font-size: 20px
+      padding: 30px
+      width: 100%
+      position: absolute
+      z-index: 5
+      input,textarea
+        display: block
+        background-color: transparent
+        border: none
+        border: solid 3px $color_blue
+      textarea
+        width: 100%
+        // height: unsize
+    .mailcover
+      // position: absolute
+      top: 10%
+      transform: scale(1.25)rotate(10deg)
+      
+//- -----------------------
+footer
+  background-color: $color_brown
+  text-align: center
+  img
+    width: 80%
+    max-width: 250px
+    padding: 80px 0px
+    
+    
+  

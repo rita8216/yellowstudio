@@ -1,0 +1,123 @@
+nav.navbar.navbar-default.navbar-fixed-top.at_top
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='#header_index') Yellow Studio
+    #navbar.navbar-collapse.collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#section_about') About
+        li
+          a(href='#section_works')
+            | Works
+            span.sr-only (current)
+        li
+          a(href='#section_contact') Contact
+//- -----------------------
+header
+  .container
+    img.icon(src="https://awiclass.monoame.com/img/webpic/w_icon.svg", alt="")
+    
+    .explore.at_top EXPLORE
+  img.marginbottom.mountain(src="http://awiclass.monoame.com/img/margin/m_index.svg")
+//- -----------------------
+section#section_about
+  img#cat(src="https://awiclass.monoame.com/catpic/cat_left.png", alt="")
+  #cross
+  .container
+    .row
+      .col-sm-8.col-sm-offset-4
+        img.tri.tri1(src="https://awiclass.monoame.com/img/webpic/w_tri1.svg", alt="")
+        h2.r1text WORKS IN YELLOW
+    .row
+      .col-sm-4
+        img.tri.tri2(src="https://awiclass.monoame.com/img/webpic/w_tri2.svg", alt="")
+      .col-sm-8
+        img.tri.tri3(src="https://awiclass.monoame.com/img/webpic/w_tri3.svg", alt="")
+        h3.r2text YELLOW STUDIO-Website Design / Development
+        h3.r2text Interactive Art Design
+    .row
+      .col-sm-8
+        h2.r3text 430 MORE SUCCESS CASES
+    .row
+      .col-sm-4
+        a.btn.btn-default.btn-lg(href="#section_works") more cases
+        img.tri.tri4(src="https://awiclass.monoame.com/img/webpic/w_tri4.svg", alt="")
+      .col-sm-4
+        img.tri.tri5(src="https://awiclass.monoame.com/img/webpic/w_tri5.svg", alt="")
+//- -----------------------        
+section#section_service
+  .container
+    .row
+      .col-sm-12
+        h1 Service
+        
+    .row
+      .col-sm-4 
+        img(src="https://awiclass.monoame.com/img/webpic/w_service_icon1.svg", alt="")
+        h3 CI/VI Design
+      .col-sm-4 
+        img(src="https://awiclass.monoame.com/img/webpic/w_service_icon2.svg", alt="")
+        h3 MotionGraphic
+      .col-sm-4 
+        img(src="https://awiclass.monoame.com/img/webpic/w_service_icon3.svg", alt="")
+        h3 Web Development
+//- -----------------------
+
+section#section_works
+  img.marginbottom.mountain(src="https://awiclass.monoame.com/img/margin/m_works.svg")
+  .container#app
+    .row(v-if="works.length>0")
+      .col-sm-12
+        h1 works
+      .col-sm-6.work.big
+        img(v-bind:src="works[1].img")
+        //v-bind:src 可簡寫成 :src
+        .texts
+          h4.title {{works[1].name}}
+          p.content(v-html="works[1].content.substr(0,40)")
+        
+        
+      .col-sm-6
+        .row
+          .col-sm-6.work(v-for="w in works.slice(2,6)")
+        
+            img(:src="w.img", alt="")
+            .texts
+              h4.title {{w.name}}
+          //只顯示3.4.5.6
+//- -----------------------
+section#section_contact
+  img.cat#cat_blue(src="https://awiclass.monoame.com/catpic/cat_blue_cat.png", alt="")
+  img.cat#cat_grey(src="https://awiclass.monoame.com/catpic/cat_grey_cat.png", alt="")
+  img.cat#cat_yellow(src="https://awiclass.monoame.com/catpic/cat_yellow_cat.png", alt="")
+  .container
+    .row
+      .col-sm-6
+        .mails
+          
+          .mailcontent
+            h4 Dear yellow studio :
+            label name
+            input
+            label email
+            input
+            label content
+            textarea
+          .mailcover
+            img(src="https://awiclass.monoame.com/img/webpic/w_mail_cover.svg", alt="")
+        
+      .col-sm-6.contact
+        h2 CONTACT
+        br
+        p If you have any question about us,<br>Don`t hestitate to contact us !
+        br
+        br
+        p YELLOWSTUDIO@gmail.com<br>ADDRESS: TAIWAN, TAIPEI , XORO Road<br>Phone: 02-12345678
+footer
+  .container
+    img(src="https://awiclass.monoame.com/img/webpic/w_icon_black.svg", alt="")
